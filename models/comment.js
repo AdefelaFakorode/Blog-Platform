@@ -9,13 +9,26 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       this.belongsTo(models.User);
-      this.belongsTo(Post)
+      this.belongsTo(models.Post);
     }
   }
   Comment.init(
     {
-      content: { type: DataTypes.TEXT },
-      userid: { type: DataTypes.INTEGER },
+      content: { type: DataTypes.TEXT, allowNull: false },
+      userid: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: "users",
+          key: "id",
+        },
+      },
+      postid: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: "posts",
+          key: "id",
+        },
+      },
     },
     {
       sequelize,
