@@ -52,5 +52,3 @@ POST /signup: Create a new user account.
 POST /login: Log in an existing user.
 
 DELETE /logout: Log out the current user.
-
-Test the program using the Postman aplication using link below
