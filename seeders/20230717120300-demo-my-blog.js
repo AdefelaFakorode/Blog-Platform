@@ -64,7 +64,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          body: "Tbh bro...this sucked...",
+          content: "Tbh bro...this sucked...",
           userid: uId,
           postid: pId,
           createdAt: new Date(),
