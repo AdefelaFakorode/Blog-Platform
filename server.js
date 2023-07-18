@@ -78,7 +78,7 @@ app.post("/signup", async (req, res) => {
   }
 });
 
-//post request to login
+//post request to  login
 app.post("/login", async (req, res) => {
   try {
     const user = await User.findOne({
@@ -357,7 +357,9 @@ app.patch(
 );
 
 //delete specific post
-app.delete("/posts/:id", authenticateUser, async (req, res) => {
+app.delete("/posts/:id", 
+authenticateUser, 
+async (req, res) => {
   const postId = parseInt(req.params.id, 10);
 
   try {
@@ -382,7 +384,9 @@ app.delete("/posts/:id", authenticateUser, async (req, res) => {
 });
 
 //delete specific comment
-app.delete("/posts/:postId/comments/:commentid",authenticateUser,async (req, res) => {
+app.delete("/posts/:postId/comments/:commentid",
+authenticateUser,
+async (req, res) => {
     const commentId = parseInt(req.params.commentId, 10);
 
     try {
