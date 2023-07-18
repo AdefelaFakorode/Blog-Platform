@@ -72,7 +72,7 @@ app.post("/signup", async (req, res) => {
         .json({ errors: error.errors.map((e) => e.message) });
     }
     res.status(500).json({
-      message: "Error occurred when creating user...",
+      message: "Error occurred when making user...",
       error: error,
     });
   }
