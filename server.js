@@ -40,7 +40,7 @@ const authenticateUser = (req, res, next) => {
   }
   next();
 };
-//welcomeing message for root route
+//welcoming message for root route
 app.get("/", (req, res) => {
   res.send("Welcome to my blog...");
 });
